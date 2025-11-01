@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -47,7 +49,8 @@ fun FormData(modifier: Modifier = Modifier) {
                 .background(
                     brush = Brush.verticalGradient(listOf(purple, purpleDark)),
                     shape = RoundedCornerShape(bottomStart = 0.dp, bottomEnd = 0.dp)
-                ),contentAlignment = Alignment.CenterStart
+                ),
+            contentAlignment = Alignment.CenterStart
         ) {
             Text(
                 text = "Formulir Pendaftaran",
@@ -57,4 +60,10 @@ fun FormData(modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(horizontal = 20.dp)
             )
         }
+        ElevatedCard(
+            elevation = CardDefaults.elevatedCardElevation(defaultElevation = 6.dp),
+            colors = CardDefaults.cardColors(containerColor = Color(0xFFF8F8F8)),
+            shape = RoundedCornerShape(16.dp),
+            modifier = Modifier.fillMaxWidth()
+        )
 
