@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
@@ -28,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -192,6 +194,25 @@ fun FormData(modifier: Modifier = Modifier) {
                         .fillMaxWidth()
                         .padding(top = 12.dp)
                 )
+
+                HorizontalDivider(
+                    modifier = Modifier.padding(vertical = 12.dp),
+                    thickness = dimensionResource(id = R.dimen.divider_tipis),
+                    color = Color.DarkGray
+                )
+
+                Button(
+                    onClick = {
+                        nama = textNama
+                        jenis = textJK
+                        alamat = textAlamat
+                        nikah = textNikah
+                    },
+                    enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty() && textJK.isNotEmpty() && textNikah.isNotEmpty(),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(stringResource(id = R.string.submit))
+                }
 
                 HorizontalDivider(
                     modifier = Modifier.padding(vertical = 12.dp),
