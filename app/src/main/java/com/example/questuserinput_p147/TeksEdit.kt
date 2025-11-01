@@ -6,6 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 
 @Composable
 fun FormData(modifier: Modifier = Modifier) {
@@ -18,3 +19,10 @@ fun FormData(modifier: Modifier = Modifier) {
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
     var nikah by remember { mutableStateOf("") }
+
+    val gender = listOf("Laki-Laki", "Perempuan")
+    val status = listOf("Janda", "Lajang", "Duda")
+    val purple = Color(0xFF8A2BE2)
+    val purpleDark = Color(0xFF6A1FBF)
+
+
