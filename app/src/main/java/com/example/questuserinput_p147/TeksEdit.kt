@@ -1,12 +1,21 @@
 package com.example.questuserinput_p147
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun FormData(modifier: Modifier = Modifier) {
@@ -25,4 +34,13 @@ fun FormData(modifier: Modifier = Modifier) {
     val purple = Color(0xFF8A2BE2)
     val purpleDark = Color(0xFF6A1FBF)
 
+    Column(modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(84.dp)
+                .background(
+                    brush = Brush.verticalGradient(listOf(purple, purpleDark)),
+                    shape = RoundedCornerShape(bottomStart = 0.dp, bottomEnd = 0.dp)
+                ),
 
