@@ -134,3 +134,38 @@ fun FormData(modifier: Modifier = Modifier) {
                         }
                     }
                 }
+
+                Text(
+                    text = "Status Perkawinan :",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 3.dp)
+                        .padding(horizontal = 1.dp),
+                    textAlign = TextAlign.Left
+                )
+
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp)
+                ) {
+                    status.forEach { item ->
+                        Row (
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.selectable(
+                                selected = textNikah == item,
+                                onClick = { textNikah = item }
+                            )
+                        ){
+                            RadioButton(
+                                selected = textNikah == item,
+                                onClick = { textNikah = item }
+                            )
+                            Text(item)
+                        }
+
+                    }
+                }
