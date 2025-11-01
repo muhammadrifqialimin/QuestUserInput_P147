@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -86,3 +88,23 @@ fun FormData(modifier: Modifier = Modifier) {
                     textAlign = TextAlign.Left
                 )
 
+                OutlinedTextField(
+                    value = textNama,
+                    onValueChange = { textNama = it },
+                    singleLine = true,
+                    shape = MaterialTheme.shapes.large,
+                    label = { Text("Nama Lengkap") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+
+                Text(
+                    text = "Jenis Kelamin :",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 3.dp)
+                        .padding(horizontal = 1.dp),
+                    textAlign = TextAlign.Left
+                )
