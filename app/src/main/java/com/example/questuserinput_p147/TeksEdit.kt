@@ -1,6 +1,7 @@
 package com.example.questuserinput_p147
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -65,5 +66,12 @@ fun FormData(modifier: Modifier = Modifier) {
             colors = CardDefaults.cardColors(containerColor = Color(0xFFF8F8F8)),
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.fillMaxWidth()
-        )
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(20.dp)
+                    .fillMaxWidth(),
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally
+            )
 
