@@ -219,3 +219,22 @@ fun FormData(modifier: Modifier = Modifier) {
                     thickness = dimensionResource(id = R.dimen.divider_tipis),
                     color = Color.DarkGray
                 )
+
+                ElevatedCard(
+                    elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.Black),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(110.dp)
+                ) {
+                    Column(Modifier.padding(horizontal = 12.dp, vertical = 16.dp)) {
+                        Text("Nama   : $nama", color = Color.White)
+                        Text("Gender : $jenis", color = Color.White)
+                        Text("Alamat : $alamat", color = Color.White)
+                        Text("Status : $nikah", color = Color.White)
+                    }
+                }
+            }
+        }
+    }
+}
